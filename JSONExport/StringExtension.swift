@@ -42,7 +42,9 @@ extension String{
         var singular = self
         let length = self.characters.count
         if length > 3{
-            let range = Range(characters.index(endIndex, offsetBy: -3) ..< endIndex)
+            let range = characters.index(endIndex, offsetBy: -3) ..< endIndex
+
+            //let range = Range(characters.index(endIndex, offsetBy: -3) ..< endIndex)
             
             let lastThreeChars = self.substring(with: range)
             if lastThreeChars == "ies" {
@@ -52,7 +54,9 @@ extension String{
                 
         }
         if length > 2{
-            let range = Range(characters.index(endIndex, offsetBy: -1) ..< endIndex)
+            let range = characters.index(endIndex, offsetBy: -1) ..< endIndex
+            
+            //let range = Range(characters.index(endIndex, offsetBy: -1) ..< endIndex)
             let lastChar = self.substring(with: range)
             if lastChar == "s" {
                 singular = self.replacingOccurrences(of: lastChar, with: "", options: [], range: range)
@@ -69,7 +73,9 @@ extension String{
     */
     func lowercaseFirstChar() -> String{
         if self.characters.count > 0{
-            let range = Range(startIndex ..< characters.index(startIndex, offsetBy: 1))
+            let range = startIndex ..< characters.index(startIndex, offsetBy: 1)
+          
+            //let range = Range(startIndex ..< characters.index(startIndex, offsetBy: 1))
             let firstLowerChar = self.substring(with: range).lowercased()
             
             return self.replacingCharacters(in: range, with: firstLowerChar)
@@ -86,7 +92,8 @@ extension String{
     */
     func uppercaseFirstChar() -> String{
         if self.characters.count > 0{
-            let range = Range(startIndex ..< characters.index(startIndex, offsetBy: 1))
+            let range = startIndex ..< characters.index(startIndex, offsetBy: 1)
+            //let range = Range(startIndex ..< characters.index(startIndex, offsetBy: 1))
             let firstUpperChar = self.substring(with: range).uppercased()
             
             return self.replacingCharacters(in: range, with: firstUpperChar)
