@@ -306,7 +306,7 @@ class FilesContentBuilder{
     func propertyNativeName(_ jsonKeyName : String) -> String
     {
         var propertyName = cleanUpVersionOfPropertyNamed(jsonKeyName)
-        propertyName = underscoresToCamelCaseForString(propertyName, startFromFirstChar: false).lowercaseFirstChar()
+        //propertyName = underscoresToCamelCaseForString(propertyName, startFromFirstChar: false).lowercaseFirstChar()
         //Fix property name that could be a reserved keyword
         if lang.reservedKeywords != nil && lang.reservedKeywords.contains(propertyName.lowercased()){
             //Property name need to be suffixed by proper suffix, any ideas of better generlized prefix/suffix?

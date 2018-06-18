@@ -173,23 +173,23 @@ class FileRepresenter{
         if let me = ABAddressBook.shared()?.me(){
             
             if let firstName = me.value(forProperty: kABFirstNameProperty as String) as? String{
-                fileContent += "//\n//\tCreate by \(firstName)"
+                //fileContent += "//\n//\tCreate by \(firstName)"
                 if let lastName = me.value(forProperty: kABLastNameProperty as String) as? String{
-                   fileContent += " \(lastName)"
+                   //fileContent += " \(lastName)"
                 }
             }
             
             
-            fileContent += " on \(getTodayFormattedDay())\n//\tCopyright © \(getYear())"
+           // fileContent += " on \(getTodayFormattedDay())\n//\tCopyright © \(getYear())"
             
             if let organization = me.value(forProperty: kABOrganizationProperty as String) as? String{
-                fileContent += " \(organization)"
+                //fileContent += " \(organization)"
             }
             
             fileContent += ". All rights reserved.\n"
         }
         
-        fileContent += "//\tModel file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport"
+        //fileContent += "//\tModel file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport"
         
         if let langAuthor = lang.author{
             fileContent += "\n\n//\tThe \"\(lang.displayLangName!)\" support has been made available by \(langAuthor.name!)"
@@ -198,7 +198,7 @@ class FileRepresenter{
             }
             
             if let website = langAuthor.website{
-                fileContent += "\n//\tMore about him/her can be found at his/her website: \(website)"
+                //fileContent += "\n//\tMore about him/her can be found at his/her website: \(website)"
             }
             
         }
