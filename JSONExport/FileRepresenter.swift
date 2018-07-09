@@ -186,7 +186,7 @@ class FileRepresenter{
                 //fileContent += " \(organization)"
             }
             
-            fileContent += ". All rights reserved.\n"
+            fileContent += "//Created By Abdu Exporter. All rights reserved.\n"
         }
         
         //fileContent += "//\tModel file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport"
